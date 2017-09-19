@@ -1,4 +1,4 @@
-#Example
+#Example with database 'cars'
 
 #Read database
 data(cars)
@@ -13,11 +13,15 @@ summary(cars)
 model <- lm(speed ~ dist, data = cars)
 model
 model$coefficients
-model$coefficients[1]
-model$coefficients[2]
+model$coefficients[1] #intersection in y axys
+model$coefficients[2] #inclination
+summary(model)
 
 #predict for dist = 25
 model$coefficients[1] + model$coefficients[2] * 25
 #or
 predict(model, data.frame(dist=25))
 
+#validation model
+##residuals
+model$residuals
