@@ -51,9 +51,11 @@ summary(model2)$adj.r.squared
 plot(mpg ~disp, data=mtcars)
 abline(model2)
 predict(model2, data.frame(disp=200))
+plot(model3)
 
 model3 <- lm(mpg ~ disp + hp + cyl, data=mtcars)
 model3
 summary(model3)$r.squared
 summary(model3)$adj.r.squared
 predict(model3, data.frame(disp=200, hp=100, cyl=4))
+plot(model3)
