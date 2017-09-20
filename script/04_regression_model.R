@@ -1,5 +1,7 @@
 #Example with database 'cars'
 
+#Linear Regression Single
+
 #Read database
 data(cars)
 typeof(cars)
@@ -35,3 +37,23 @@ abline(model)
 par(mfrow = c(2, 2))
 plot(model)
 par(mfrow = c(1, 1))
+
+#Multiple Linear Regression
+data("mtcars")
+dim(mtcars)
+cor(mtcars[1:4])
+
+#make model
+model2 <- lm(mpg ~ disp, data = mtcars)
+model2
+summary(model2)$r.squared
+summary(model2)$adj.r.squared
+plot(mpg ~disp, data=mtcars)
+abline(model2)
+predict(model2, data.frame(disp=200))
+
+model3 <- lm(mpg ~ disp + hp + cyl, data=mtcars)
+model3
+summary(model3)$r.squared
+summary(model3)$adj.r.squared
+predict(model3, data.frame(disp=200, hp=100, cyl=4))
