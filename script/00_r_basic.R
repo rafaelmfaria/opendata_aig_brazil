@@ -30,8 +30,32 @@ idade[9] <- 56 #adiciona um novo valor no indice 9 do vetor
 length(idade)
 
 #operacoes com vetor
-
-
-
-
-
+idade + 2
+idade - 2
+idade * 2
+idade / 2
+prod(idade)
+idade^2
+sqrt(idade)
+idade2 <- idade * 2
+idade + idade2
+sin(idade)
+cos(idade)
+max(idade)
+min(idade)
+sort(idade)
+sort(idade, decreasing = TRUE)
+idade < idade2
+min(idade) < min(idade2)
+idade == idade2
+idade[3]=90
+idade2[3]=90
+idade[3]==idade2[3]
+idade==idade2
+union(idade, idade2)
+intersect(idade, idade2)
+setdiff(idade, idade2)
+idade<=idade2
+ls()
+remove(idade)
+ls()
