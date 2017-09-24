@@ -59,3 +59,27 @@ idade<=idade2
 ls()
 remove(idade)
 ls()
+
+##Sequências
+
+#sequenciais
+1:10
+seq(1,10)
+seq(1,10,2)
+
+#repetições
+idades<-c(23,34,28)
+rep(idades, 10)
+rep(1:3, 2, each=4)
+cidades<-c("Salvador", "Recife", "Olinda")
+rep(cidades, each=2)
+rep(cidades, 2)
+rep(cidades, c(3,5,7))
+
+#amostras aleatorias
+sample(1:60,6)
+sample(1:60,6, replace = TRUE)
+sort(sample(1:60,6, replace = FALSE), decreasing = FALSE)
+numero <- sample(1:60,6, replace = TRUE)
+numero
+rank(numero)
