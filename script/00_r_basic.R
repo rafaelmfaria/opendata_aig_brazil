@@ -182,3 +182,15 @@ image(A)
 contour(A)
 contour(B)
 A
+persp(A)
+persp(B)
+
+#Labels de matrizes
+A<-matrix(0,3,3)
+A
+colunas<-c('idade', 'sexo', 'peso')
+linhas<-c('marlos', 'josé', 'pedro')
+A<-matrix(0,3,3, dimnames = list(linhas, colunas))
+A
+dimnames(A)
+
