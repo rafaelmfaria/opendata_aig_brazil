@@ -143,4 +143,42 @@ A2[,-2] #remove segunda coluna
 A2[-1,] #remove primeira linha
 A2[-1, -2] #remove primeira linha e segunda coluna
 
-#operações
+##operações
+A<-matrix(10,5,5)
+A
+A+4
+A-4
+A*3
+A*(-3)
+A/5
+A/8
+A^2
+sqrt(A)
+log(A)
+B<-matrix(2,5,5)
+B
+A+B
+A-B
+A*B #não é a multiplicação de matrizes(multiplica elementos)
+A%*%B #multiplicação de matrizes (produto matricial)
+
+##curiosidades
+A<-matrix(1:25, 5, 5)
+A
+diag(A)
+det(A)
+dim(A)
+B<-A[,-3]
+B
+t(B)
+A
+image(A)
+image(B)
+A[,1]<-1000
+image(A)
+A
+A[3,]<-300
+image(A)
+contour(A)
+contour(B)
+A
