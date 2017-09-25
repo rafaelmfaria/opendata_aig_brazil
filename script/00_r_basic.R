@@ -109,7 +109,38 @@ matrix(seq(1:10), nrow = 2, ncol = 5, byrow = FALSE)
 matrix(c('a', 'b'), ncol=4, nrow = 3)
 
 ##acessando elementos da matriz
+A<-matrix(1:20,5,6)
+A
+A[2,1]
+A[3,]
+A[,4]
+A[1:3,2:5]
+A[c(1,3,4), c(3,4)]
+A[c(2,3),]
+nrow(A)
+ncol(A)
 
+##modificar elemntos da matriz
+A<-matrix(1:20, 4, 5)
+A[3,5]
+A[3,5] <- 90
+A[,3]
+A[,3] <-0
+A[2,]
+A[2,]<-100
+A
+v<-c(1:4)
+A2<-cbind(A,v)
+A2
+ncol(A2)
+x<-c(1:6)
+A3<-rbind(A2,x)
+A3
 
+##removendo elementos
+A2
+A2[,-2] #remove segunda coluna
+A2[-1,] #remove primeira linha
+A2[-1, -2] #remove primeira linha e segunda coluna
 
-
+#operações
