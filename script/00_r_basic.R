@@ -83,3 +83,33 @@ sort(sample(1:60,6, replace = FALSE), decreasing = FALSE)
 numero <- sample(1:60,6, replace = TRUE)
 numero
 rank(numero)
+
+#matrizes
+
+##criação de matriz
+v1<-c(2,3,4)
+v2<-c(3,6,7)
+A<-rbind(v1,v2)
+B<-cbind(v1,v2)
+dim(A)
+dim(B)
+length(A)
+
+v1<-c('recife', 'olinda', 'salvador')
+v2<-c(23,45,56)
+rbind(v2,v1)
+
+##comando matrix
+matrix(0,2,4)
+matrix('exemplo',3,5)
+matrix(seq(1:9), nrow = 3, byrow = FALSE)
+matrix(seq(1:9), nrow = 3, byrow = TRUE)
+matrix(seq(1:9), ncol = 3, byrow = FALSE)
+matrix(seq(1:10), nrow = 2, ncol = 5, byrow = FALSE)
+matrix(c('a', 'b'), ncol=4, nrow = 3)
+
+##acessando elementos da matriz
+
+
+
+
