@@ -1,4 +1,20 @@
+#http://venus.ifca.unican.es/Rintro/dataStruct.html
+#https://www.stat.auckland.ac.nz/~paul/ItDT/HTML/node64.html
 
+
+#Vectors: one-dimensional arrays used to store collection data of the same mode
+##Numeric Vectors (mode: numeric)
+##Complex Vectors (mode: complex)
+##Logical Vectors (model: logical)
+##Character Vector or text strings (mode: character)
+#Matrices: two-dimensional arrays to store collections of data of the same mode. They are accessed by two integer indices.
+#Arrays: similar to matrices but they can be multi-dimensional (more than two dimensions)
+#Factors: vectors of categorical variables designed to group the components of another vector with the same size
+#Lists: ordered collection of objects, where the elements can be of different types
+#Data Frames: generalization of matrices where different columns can store different mode data.
+#Functions: objects created by the user and reused to make specific operations.
+
+#ver imagem em: /images/structure_data_in_r.png
 
 #Vetores
 
@@ -193,4 +209,13 @@ linhas<-c('marlos', 'josé', 'pedro')
 A<-matrix(0,3,3, dimnames = list(linhas, colunas))
 A
 dimnames(A)
+
+#exemplo - 9.4.1 Case study: Counting candy 
+# https://www.stat.auckland.ac.nz/~paul/ItDT/HTML/node64.html
+shape<-rep(c('round', 'oval', 'long'), 4)
+pattern <- rep(c('pattern', 'plain'), 2, each=3)
+shade<-rep(c('light','dark'),1,each=6)
+count<-c(2,0,3,1,3,2,9,0,2,1,11,2)
+table_91<-data.frame(shape,pattern,shade,count)
+
 
