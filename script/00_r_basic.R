@@ -257,7 +257,7 @@ H
 dim(H)
 length(H)
 
-#acessando arrays
+#acessando arrays A[x,y,z]
 H
 despesas_joao_fev <- H[2,3,2] #acessa elemento da linha 2, coluna 3, da matriz 2
 despesas_joao_fev
@@ -266,3 +266,29 @@ despesas_joao
 lucros_jan <- H[,2,]
 lucros_jan
 
+#modificando arrays
+H
+H[,1,] <- 10
+H
+H[,3,1] <- seq(1,3)
+H
+H[3,,2] <- c(230,430,330)
+H
+H[,,1] <- matrix(1:9, ncol = 3)
+H
+H[,,2:3] <- matrix(10:18, nrow=3)
+H
+
+#operações com arrays
+H <- array(seq(1:9), dim = c(3,3,3), dimnames = list(r.names,c.names,matrizes.names))
+H[,3,1] <- c(4,7,8)
+H[,2,1] <- c(6,7,1)
+H[,3,2] <- c(4,9,8)
+H
+mean(H[1,,])
+sum(H[,3,3])
+apply(H, c(1), sum) #por linha
+apply(H, c(2), sum) #por coluna
+apply(H, c(1), mean)
+apply(H[,2,], c(2), sum)
+mean(H[,2,])
