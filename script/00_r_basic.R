@@ -292,3 +292,17 @@ apply(H, c(2), sum) #por coluna
 apply(H, c(1), mean)
 apply(H[,2,], c(2), sum)
 mean(H[,2,])
+apply(H, c(2), sum)
+apply(H[1,,], c(2), sum) #soma de todos os gastos de marcos por mes
+apply(H[1,,], c(1), sum) #soma de todos os gastos de marcos por tipo
+
+#Fatores
+##variaveis categoricas
+
+est_civil <- c('casado', 'casado', 'solteiro', 'casado', 'solteiro', 'outro')
+a <- factor(est_civil)
+a
+a <- factor(est_civil, levels = c('solteiro', 'casado', 'outro'))
+a
+est_civil <- gl(4, 2, labels = c('solteiro', 'casado', 'divorciado', 'outro'))
+est_civil
