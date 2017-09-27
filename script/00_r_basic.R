@@ -256,3 +256,13 @@ H<-array(c(v1,v2,v3), dim = c(3,3,3), dimnames = list(r.names,c.names,matrizes.n
 H
 dim(H)
 length(H)
+
+#acessando arrays
+H
+despesas_joao_fev <- H[2,3,2] #acessa elemento da linha 2, coluna 3, da matriz 2
+despesas_joao_fev
+despesas_joao <-H[2,3,]
+despesas_joao
+lucros_jan <- H[,2,]
+lucros_jan
+
