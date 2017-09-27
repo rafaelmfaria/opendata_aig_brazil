@@ -218,4 +218,28 @@ shade<-rep(c('light','dark'),1,each=6)
 count<-c(2,0,3,1,3,2,9,0,2,1,11,2)
 table_91<-data.frame(shape,pattern,shade,count)
 
+#Arrays
+
+##Coleção de matrizes com mesma dimensão M1,M2,M3,M4 --> Array
+
+
+A<-matrix(1:20, 4, 5)
+B<-array(11:30, dim = c(4,5))
+A
+B
+C<-array(1:20, dim = c(4,5,4))
+C
+
+D<-array(c(A,B), dim = c(4,5,2))
+D
+
+E<-array(c("Recife", "Olinda", "Jaboatão"), dim = c(3,4,3))
+E
+
+##usando vetores
+vetor1<-c(20,34,56)
+vetor2<-c('André', 'Felipe', 'Maria', 'José')
+F<-array(c(vetor1, vetor2), c(3,4,2))
+F
+
 
