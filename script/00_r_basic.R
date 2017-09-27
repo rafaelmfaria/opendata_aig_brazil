@@ -222,7 +222,7 @@ table_91<-data.frame(shape,pattern,shade,count)
 
 ##Coleção de matrizes com mesma dimensão M1,M2,M3,M4 --> Array
 
-
+##criação de arrays
 A<-matrix(1:20, 4, 5)
 B<-array(11:30, dim = c(4,5))
 A
@@ -242,4 +242,17 @@ vetor2<-c('André', 'Felipe', 'Maria', 'José')
 F<-array(c(vetor1, vetor2), c(3,4,2))
 F
 
+v1<-c(40,300,150)
+v2<-scan(n = 5)
+v3<-c('maria','josé')
+G<-array(c(v1,v2,v3), dim = c(3,3,3) )
+G
 
+#nomeando arrays
+r.names<-c('marcos', 'joão', 'maria')
+c.names<-c('gastos', 'lucros', 'despesas')
+matrizes.names<-c('Janeiro', 'Fevereiro', 'Março')
+H<-array(c(v1,v2,v3), dim = c(3,3,3), dimnames = list(r.names,c.names,matrizes.names))
+H
+dim(H)
+length(H)
