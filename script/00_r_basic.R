@@ -366,4 +366,63 @@ l3 <- c(l1, l2) #junta
 names(l3)
 
 #Data Frames
+nome<-c('joao','maria','marcos')
+idade<-c(23,23,45)
+genero<-c('m','f','m')
+dados<-data.frame(nome, idade, genero)
+str(dados)
+dados
+dim(dados)
+length(dados)
+ncol(dados)
+nrow(dados)
+names(dados)
+summary(dados)
+
+#acessando data frames
+dados
+dados[1,]
+dados[1:2,]
+dados[c(1,3),]
+dados[,2] #idade
+dados[,2:3]
+dados[2,2]
+dados[1:2,2:3]
+dados$idade
+attach(dados)
+names(dados)
+dados$genero
+
+#modificando data frames
+dados
+dados$idade
+dados$idade<-c(23,45,63)
+dados$idade[2]
+dados$idade[2]<-90
+dados$nome[1]<-c("pedro")
+dados$nome<-c('marcos', 'maria','gaspar')
+dados$nome[2]
+dados$nome[2]<-c("amanda")
+dados
+
+#adicionar e remover variaveis e casos
+dados
+dados$cidade<-c('são paulo', 'macapá', 'rio de janeiro') #add coluna
+dados
+
+dados<-dados[,-4] #remove quarta coluna
+dados
+
+#removendo e adicionando registros
+dados<-dados[-2,] #remove segunda linha
+dados
+str(dados)
+dados[2,]<-c('paula', 29, 'f')
+dados[3,]<-c('andré', 34, 'm')
+dados[4,]<-c('murilo', 45, 'm')
+dados
+dados$idade <- as.numeric(dados$idade)
+dados
+str(dados)
+
 
