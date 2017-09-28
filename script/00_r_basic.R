@@ -306,3 +306,24 @@ a <- factor(est_civil, levels = c('solteiro', 'casado', 'outro'))
 a
 est_civil <- gl(4, 2, labels = c('solteiro', 'casado', 'divorciado', 'outro'))
 est_civil
+
+
+#Listas
+##Guarda uma coleção de objetos diferentes
+##criação de listas
+fct <- factor(c('JAN', 'FEV', 'MAR'))
+l1 <- list(4, c('a', 'b', 'c'), matrix(1:9, ncol = 3), fct)
+l1
+l.names <- c('num', 'let', 'matr', 'fact')
+c.names <- c('valor1', 'valor2')
+m.names <- c('dim1', 'dim2', 'dim3')
+arr <- array(1:20, dim = c(4,2,3), dimnames = list(l.names, c.names, m.names))
+arr
+l2 <- list(arr, fct)
+l2
+names(l2) <- c('matrizes', 'fatores')
+l2
+l2$matrizes
+l2$fatores
+
+##
