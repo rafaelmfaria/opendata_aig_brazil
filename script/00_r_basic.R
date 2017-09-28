@@ -326,4 +326,18 @@ l2
 l2$matrizes
 l2$fatores
 
-##
+##Acessando listas
+l2[1]
+l2$matrizes
+l2[2]
+l2$fatores
+l2[3] #nao existe
+l2$fatores[2] #FEV
+
+## Modificando listas
+l2$fatores
+l2$fatores[1]
+l2$fatores <- factor(c('a','b','c'))
+l2
+l2$matrizes[1,2,2] <- 239 
+l2$matrizes
