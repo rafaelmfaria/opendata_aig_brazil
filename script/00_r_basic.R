@@ -341,3 +341,29 @@ l2$fatores <- factor(c('a','b','c'))
 l2
 l2$matrizes[1,2,2] <- 239 
 l2$matrizes
+
+## adicionar e remover elementos
+l2
+names(l2)
+l2[1]
+l2[2]
+l2[3] <- c('mensagem de atenção') #adiciona
+l2
+l2[3]
+names(l2)[3] <- 'aviso'
+l2$aviso
+l2
+
+l2[3] <- NULL #remove
+l2
+
+#combinando listas
+l1
+names(l1) <- c('A', 'B', 'C', 'D')
+names(l1)
+names(l2)
+l3 <- c(l1, l2) #junta
+names(l3)
+
+#Data Frames
+
