@@ -467,3 +467,73 @@ if(x==5){
 if(x==3){
   print('OK. x é igual a 3.')
 }
+
+#EX 1
+# Criar um algoritmo em R que faça:
+#   
+# 1 - Cadastro de alunos (nome, e-mail, etc..., notas de provas)
+# 
+# Aqui você precisa aplicar o que vimos em vetores, a função scan() deverá ser usada. Para saber se o aluno foi aprovado, basta criar um vetor "nota média" que é o calculo de outros vetores (notas), então se neste vetor média o indivíduo tiver nota abaixo de 7 (por exemplo) estará "reprovado", caso contrário aprovado (neste caso você precisa usar o if() para fazer o decision making).
+# 
+# 2 - Mostra os dados dos alunos cadastrados informando também os aprovados e reprovados.
+# 
+# Com os vetores criados, você monta um DataFrame e depois mostrar ele na tela.
+# Perguntas para esta tarefa
+# 
+# Você conseguiu "scanear" as informações do usuário e guardá-las em vetores?
+# 
+# Você conseguiu criar um vetor de médias com base nas notas cadastrada do tal aluno?
+# 
+# Conseguiu aplicar o decision making para o próprio algoritmo identificar os alunos Aprovados e para os Reprovados?
+# 
+# Com todas as informações guardadas no cadastro, conseguiu montar um data frame?
+
+cadastro <- function(qtd){
+  aluno_nome = c()
+  aluno_email = c()
+  aluno_nota1 = c()
+  aluno_nota2 = c()
+  
+  print('Quantos alunos deseja cadastrar?')
+  qts = scan(n=1)
+  
+  print('Digite os nomes dos alunos')
+  aluno_nome <- scan(what = character(), n = qts)
+
+  print('Digite os emails do alunos')
+  aluno_email <- scan(what = character(), n = qts)
+
+  print('Digite as notas de BIOLOGIA do alunos')
+  aluno_nota1 <- scan(n = qts)
+  
+  print('Digite as notas de MATEMÁTICA do alunos')
+  aluno_nota2 <- scan(n = qts)
+  
+  dados <- data.frame(aluno_nome, aluno_email, aluno_nota1, aluno_nota2)
+                      
+  media <- mean(c(dados$aluno_nota1, dados$aluno_nota2))
+  media_aluno <- c()
+  for(i in 1:dim(dados)[1]){
+    media_aluno[i] <- mean(c(dados$aluno_nota1[i], dados$aluno_nota2[i]))
+  }
+  
+  dados <- data.frame(dados, media_aluno)
+  print(dados)
+  print('#################')
+  
+  print(paste('A média da classe foi: ', media))
+  print('#################')
+  
+  for(i in 1:dim(dados)[1]){
+    if(dados$media_aluno[i] >= 7){
+      print(paste('O aluno ', dados$aluno_nome[i], ' foi aprovado com nota ', dados$media_aluno[i]))
+    }
+    else if(dados$media_aluno[i] < 7){
+      print(paste('O aluno ', dados$aluno_nome[i], ' foi reprovado com nota ', dados$media_aluno[i]))
+    }
+    else{
+      print('Cálculo não realizado')
+    }
+  }
+}
+
