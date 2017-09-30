@@ -425,4 +425,33 @@ dados$idade <- as.numeric(dados$idade)
 dados
 str(dados)
 
+#Operadores e Funções
+3==3
+3==5
+3!=0
+3!=3
+3>9
+3<9
+3<=3
+3<=4
+4>=4
+4>=5
 
+#loops
+x=c(45,3,4,5)
+
+for(i in x){
+  print(i)
+}
+
+for(i in 1:length(x)){
+  print(sum(i + x[i]))
+}
+
+limite <- 1
+while(limite < 6){
+  print(limite)
+  limite <- limite + 1
+}
+
+#decision marking
