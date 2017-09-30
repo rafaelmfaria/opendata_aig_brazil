@@ -454,4 +454,16 @@ while(limite < 6){
   limite <- limite + 1
 }
 
-#decision marking
+#decision making
+##satisfazendo condições
+
+x<-3
+if(x==9){
+  print('Digitou 5')
+}
+if(x==5){
+  print('Digitou 5')
+}
+if(x==3){
+  print('OK. x é igual a 3.')
+}
