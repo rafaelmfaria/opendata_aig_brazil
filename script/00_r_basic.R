@@ -488,12 +488,15 @@ if(x==3){
 # 
 # Com todas as informações guardadas no cadastro, conseguiu montar um data frame?
 
-cadastro <- function(qtd){
+cadastro <- function(){
   aluno_nome = c()
   aluno_email = c()
   aluno_nota1 = c()
   aluno_nota2 = c()
   
+  print('#################')
+  print('Cadastro das Notas dos Alunos')
+  print('#################')
   print('Quantos alunos deseja cadastrar?')
   qts = scan(n=1)
   
@@ -518,6 +521,9 @@ cadastro <- function(qtd){
   }
   
   dados <- data.frame(dados, media_aluno)
+  print('#################')
+  print('Tabela de Dados Cadastrados')
+  print('#################')
   print(dados)
   print('#################')
   
@@ -535,5 +541,6 @@ cadastro <- function(qtd){
       print('Cálculo não realizado')
     }
   }
+  print('#################')
 }
 
