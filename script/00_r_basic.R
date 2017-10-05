@@ -1,6 +1,7 @@
 #http://venus.ifca.unican.es/Rintro/dataStruct.html
 #https://www.stat.auckland.ac.nz/~paul/ItDT/HTML/node64.html
 #https://www.udemy.com/linguagemrdozeroaodominio/learn
+#
 
 #Vectors: one-dimensional arrays used to store collection data of the same mode
 ##Numeric Vectors (mode: numeric)
