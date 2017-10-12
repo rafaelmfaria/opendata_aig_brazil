@@ -70,12 +70,13 @@ sum(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == 'ACIDENTE'
 for(i in temp_class){
   nomearquivo = paste("images/por_mes_", tolower(i),".jpg", sep="")
   bmp(nomearquivo,width=graficolargura1,height=graficoaltura1)
+  indice_cor = which(temp_class==i)  #captura o indice da palavra i
   barplot(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == i)),
           main = paste("Total de ", toTitleCase(tolower(i)), "s", " por Mês entre ",
                        substring(min(ocorrencia_dia), 1, 4), 
                        "-", 
                        substring(max(ocorrencia_dia), 1, 4), sep=""), #título do gráfico
-          col = rep(rainbow(1), length(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == i)))), #cores das barras
+          col = rep(rainbow(indice_cor)[indice_cor], length(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == i)))), #cores das barras
           ylab = paste("Total de ", toTitleCase(tolower(i)), "s", sep=""), #label do eixo y
           xlab = "Mês", #label do eixo x
           cex.names = 0.8, #tamanho do texto dos eixos
@@ -91,7 +92,7 @@ for(i in temp_class){
     bmp(nomearquivo,width=graficolargura1,height=graficoaltura1)
     barplot(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == i & ocorrencia_ano == j)),
             main = paste("Total de ", toTitleCase(tolower(i)), "s", " por Mês no Ano de ", j, sep=""), #título do gráfico
-            col = rep(rainbow(1), length(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == i)))), #cores das barras
+            col = rep(rainbow(indice_cor)[indice_cor], length(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == i)))), #cores das barras
             ylab = paste("Total de ", toTitleCase(tolower(i)), "s", sep=""), #label do eixo y
             xlab = "Mês", #label do eixo x
             cex.names = 0.8, #tamanho do texto dos eixos
