@@ -32,6 +32,9 @@ graficoaltura=450
 graficolargura1=600
 graficoaltura1=350
 
+graficolargura2=700
+graficoaltura2=400
+
 ##################################
 #Classificação da Ocorrência
 ##################################
@@ -107,9 +110,12 @@ for(i in temp_class){
 #Ocorrências por Tipo de Aeronave
 ##################################
 nomearquivo=paste("images/aeronave_tipo","001",".jpg",sep="_")
-bmp(nomearquivo,width=graficolargura1,height=graficoaltura1)
+bmp(nomearquivo,width=graficolargura2, height=graficoaltura2)
 barplot(sort(table(aeronave_equipamento), decreasing = TRUE),
-        main = paste("Total de Ocorrências por Tipo de Aeronave"), #título do gráfico
+        main = paste("Total de Ocorrências por Tipo de Aeronave entre ",
+                     substring(min(ocorrencia_dia), 1, 4), 
+                     "-", 
+                     substring(max(ocorrencia_dia), 1, 4)), #título do gráfico
         col = rainbow(length(table(aeronave_equipamento))), #cores das barras
         ylab = "Total de Ocorrências", #label do eixo y
         xlab = "Tipo de Aeronave", #label do eixo x
