@@ -6,6 +6,7 @@ oco <- read_delim("data/all.csv",
                   "~", escape_double = FALSE, trim_ws = TRUE)
 
 names(oco)
+head(oco)
 attach(oco)
 
 #Carregando Pacotes
@@ -30,3 +31,8 @@ oco %>%
   ylab('Total')
 
 #Total por Localidade
+ggplot(data=oco, aes(oco$aeronave_quantidade_motores, 
+                oco$quantidade_fatalidades,
+                colour = oco$aeronave_equipamento)
+       ) +
+  geom_point()

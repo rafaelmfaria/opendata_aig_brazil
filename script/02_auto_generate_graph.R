@@ -103,6 +103,27 @@ for(i in temp_class){
   }
 
 
+##################################
+#Ocorrências por Tipo de Aeronave
+##################################
+nomearquivo=paste("images/aeronave_tipo","001",".jpg",sep="_")
+bmp(nomearquivo,width=graficolargura1,height=graficoaltura1)
+barplot(sort(table(aeronave_equipamento), decreasing = TRUE),
+        main = paste("Total de Ocorrências por Tipo de Aeronave"), #título do gráfico
+        col = rainbow(length(table(aeronave_equipamento))), #cores das barras
+        ylab = "Total de Ocorrências", #label do eixo y
+        xlab = "Tipo de Aeronave", #label do eixo x
+        cex.names = 0.7, #tamanho do texto dos eixos
+        axis.lty=1, #define padrão de linha do eixo x
+        las=1, #rotaciona labels eixo x
+        width=0.3,
+        space=0.5
+)
+mtext(dia_compilacao, side=1, line=4, cex=1)
+dev.off()
+
+
+
 # nomearquivo=paste("images/por_mes_acidente",".jpg",sep="_")
 # bmp(nomearquivo,width=graficolargura1,height=graficoaltura1)
 # barplot(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == 'ACIDENTE')),
