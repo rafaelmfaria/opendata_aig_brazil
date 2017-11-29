@@ -1,7 +1,7 @@
 #GRAPHS#
 
 ##################################
-#carregamento de bibliotecas
+#carregamento de bibliotecas uteis
 ##################################
 library(readr)
 library(tools) #capitalize texto
