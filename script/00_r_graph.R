@@ -40,4 +40,9 @@ mpg$fl
 ## qualitativa nominal
 mpg$class
 
-#
+#primeiro gráfico
+attach(mpg)
+ggplot(data = mpg, aes(x = hwy, y = cty)) + geom_point(color = cyl)
+
+
+
