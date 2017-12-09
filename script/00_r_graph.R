@@ -40,6 +40,15 @@ mpg$fl
 ## qualitativa nominal
 mpg$class
 
+#resumo das variáveis
+## qualitativa nominal - manufacturer, model, trans, drv, hwy, fl
+## qualitativa ordinal - year
+## quantitativa discreta - cyl
+## quantitativa contínua - displ, cty, hwy,
+
+#exibe total de registros e variáveis
+dim(mpg)
+
 #primeiro gráfico
 attach(mpg)
 ggplot(data = mpg, aes(x = hwy, y = cty)) + geom_point(color = cyl)
