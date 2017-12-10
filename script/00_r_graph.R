@@ -53,5 +53,8 @@ dim(mpg)
 attach(mpg)
 ggplot(data = mpg, aes(x = hwy, y = cty)) + geom_point(color = cyl)
 
-
+#segundo gráfico
+ggplot() +
+  facet_wrap(~drv) +
+  geom_boxplot(data=mpg, mapping=aes(x=fl, y=cty, color=manufacturer))
 
