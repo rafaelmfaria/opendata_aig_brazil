@@ -49,17 +49,22 @@ mpg$class
 #exibe total de registros e variáveis
 dim(mpg)
 
-#primeiro gráfico
+#primeiro gráfico | Pontos
 attach(mpg)
 ggplot(data = mpg, aes(x = hwy, y = cty)) + geom_point(color = cyl)
 
-#segundo gráfico
+#segundo gráfico | Boxplot
 ggplot() +
   facet_wrap(~drv) +
   geom_boxplot(data=mpg, mapping=aes(x=fl, y=cty, color=fl))
 
-#mostrar grid
+#mostrar grid em LATEX
 ## https://stackoverflow.com/questions/8112208/how-can-i-obtain-an-unbalanced-grid-of-ggplots
 
-
+#terceiro gráfico | Mapa de Calor
+ggplot(mpg, aes(x = manufacturer, y = drv)) +
+  geom_raster(aes(fill = cty)) +
+  labs(title = "Mapa de Calor | Consumo de Combustível na Cidade", x = "Fabricantes", y = "Tipo de Tração") +
+  scale_fill_continuous(name = "cty") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
