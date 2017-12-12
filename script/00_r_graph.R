@@ -62,9 +62,9 @@ ggplot() +
 ## https://stackoverflow.com/questions/8112208/how-can-i-obtain-an-unbalanced-grid-of-ggplots
 
 #terceiro gráfico | Mapa de Calor
-ggplot(mpg, aes(x = manufacturer, y = drv)) +
+ggplot(mpg, aes(x = manufacturer, y = fl)) +
   geom_raster(aes(fill = cty)) +
-  labs(title = "Mapa de Calor | Consumo de Combustível na Cidade", x = "Fabricantes", y = "Tipo de Tração") +
+  labs(title = "Mapa de Calor | Consumo de Combustível na Cidade", x = "Fabricantes", y = "Tipo de Combustível") +
   scale_fill_continuous(name = "cty") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
