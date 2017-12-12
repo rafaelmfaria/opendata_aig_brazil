@@ -58,13 +58,16 @@ ggplot() +
   facet_wrap(~drv) +
   geom_boxplot(data=mpg, mapping=aes(x=fl, y=cty, color=fl))
 
-#mostrar grid em LATEX
-## https://stackoverflow.com/questions/8112208/how-can-i-obtain-an-unbalanced-grid-of-ggplots
-
 #terceiro gráfico | Mapa de Calor
 ggplot(mpg, aes(x = manufacturer, y = fl)) +
   geom_raster(aes(fill = cty)) +
   labs(title = "Mapa de Calor | Consumo de Combustível na Cidade", x = "Fabricantes", y = "Tipo de Combustível") +
   scale_fill_continuous(name = "cty") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+#mostrar grid em LATEX
+## https://stackoverflow.com/questions/8112208/how-can-i-obtain-an-unbalanced-grid-of-ggplots
+
+#principais gráficos
+## https://www.analyticsvidhya.com/blog/2016/03/questions-ggplot2-package-r/
 
