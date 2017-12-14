@@ -77,3 +77,6 @@ ggplot(mpg, aes(x = manufacturer, y = fl)) +
 #tutorial completo
 ## http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html
 
+#Cheat
+## https://www.analyticsvidhya.com/blog/2015/08/cheat-sheet-data-visualization-r/
+
