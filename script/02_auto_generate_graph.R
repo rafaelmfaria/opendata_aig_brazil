@@ -131,6 +131,8 @@ dev.off()
 
 
 
+
+
 # nomearquivo=paste("images/por_mes_acidente",".jpg",sep="_")
 # bmp(nomearquivo,width=graficolargura1,height=graficoaltura1)
 # barplot(table(subset(ocorrencia_mes, subset = ocorrencia_classificacao == 'ACIDENTE')),
