@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Opendata AIG Brazil
 
 ## Sobre o Projeto
