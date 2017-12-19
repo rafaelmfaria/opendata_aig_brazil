@@ -2,8 +2,12 @@
 library(ggplot2)
 
 #lendo a base de dados de automóveis
+?mpg
 data(mpg)
+head(mpg)
 names(mpg)
+str(mpg)
+summary(mpg)
 
 #descrição das variáveis disponíveis
 ## manufacturer - fabricante do veículo
