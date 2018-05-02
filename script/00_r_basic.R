@@ -16,6 +16,7 @@
 #Functions: objects created by the user and reused to make specific operations.
 
 #ver imagem em: /images/structure_data_in_r.png
+#começa aqui
 
 
 #Vetores
