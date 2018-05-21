@@ -129,6 +129,28 @@ barplot(sort(table(aeronave_equipamento), decreasing = TRUE),
 mtext(dia_compilacao, side=1, line=4, cex=1)
 dev.off()
 
+##################################
+#Ocorrências por Tipo de Motor da Aeronave
+##################################
+nomearquivo=paste("images/aeronave_tipo_motor","001",".jpg",sep="_")
+bmp(nomearquivo,width=graficolargura2, height=graficoaltura2)
+barplot(sort(table(aeronave_tipo_motor), decreasing = TRUE),
+        main = paste("Total de Ocorrências por Tipo de Motor da Aeronave entre ",
+                     substring(min(ocorrencia_dia), 1, 4), 
+                     "-", 
+                     substring(max(ocorrencia_dia), 1, 4)), #título do gráfico
+        col = rainbow(length(table(aeronave_equipamento))), #cores das barras
+        ylab = "Total de Ocorrências", #label do eixo y
+        xlab = "Tipo de Motor da Aeronave", #label do eixo x
+        cex.names = 0.7, #tamanho do texto dos eixos
+        axis.lty=1, #define padrão de linha do eixo x
+        las=1, #rotaciona labels eixo x
+        width=0.3,
+        space=0.5
+)
+mtext(dia_compilacao, side=1, line=4, cex=1)
+dev.off()
+
 
 
 
